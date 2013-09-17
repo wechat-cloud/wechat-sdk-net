@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChat.Sdk", "src\WeChat.Sd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChat.Sdk.Tests", "src\WeChat.Sdk.Tests\WeChat.Sdk.Tests.csproj", "{93966459-5F86-4FC9-B3BC-A25E4F672C53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChat.Sdk.MenuUtil", "src\WeChat.Sdk.MenuUtil\WeChat.Sdk.MenuUtil.csproj", "{D33A85DD-514C-4403-A253-9B6440C13CA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{93966459-5F86-4FC9-B3BC-A25E4F672C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93966459-5F86-4FC9-B3BC-A25E4F672C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93966459-5F86-4FC9-B3BC-A25E4F672C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33A85DD-514C-4403-A253-9B6440C13CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33A85DD-514C-4403-A253-9B6440C13CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33A85DD-514C-4403-A253-9B6440C13CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33A85DD-514C-4403-A253-9B6440C13CA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = src\WeChat.Sdk\WeChat.Sdk.csproj
