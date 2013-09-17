@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D33A85DD-514C-4403-A253-9B6440C13CA3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WeChat.Sdk.MenuUtil</RootNamespace>
-    <AssemblyName>WeChat.Sdk.MenuUtil</AssemblyName>
+    <RootNamespace>WeChatSdk.MenuUtil</RootNamespace>
+    <AssemblyName>WeChatSdk.MenuUtil</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -4,9 +4,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="WeChat.Sdk.MenuUtil" expanded="True">
-            <Node name="Program.cs" selected="True" />
-          </Node>
+          <Node name="WeChatSdk.Tests" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

@@ -22,11 +22,11 @@
 //
 using System;
 
-namespace WeChat.Sdk
+namespace WeChatSdk
 {
-	public class WeChat
+	public class WeChatHost
 	{
-		public WeChat() {
+		public WeChatHost() {
 		}
 	}
 }
