@@ -6,7 +6,7 @@
         <State expanded="True">
           <Node name="WeChatSdk" expanded="True" />
           <Node name="WeChatSdk.Core" expanded="True">
-            <Node name="Menu" expanded="True" selected="True">
+            <Node name="Menu" expanded="True">
               <Node name="Actions" expanded="True" />
             </Node>
           </Node>

@@ -63,7 +63,6 @@
     <Folder Include="Messages\Responses\" />
     <Folder Include="Infrastucture\" />
     <Folder Include="Communication\" />
-    <Folder Include="Generic\" />
     <Folder Include="Global\" />
     <Folder Include="Menu\" />
     <Folder Include="Menu\Actions\" />
