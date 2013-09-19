@@ -27,9 +27,9 @@ namespace WeChatSdk.Core
     public class ApiInvocationLimitation
     {
         public const int AccessTokenRetrieveCount = 200;
-        public const int CustomizeMenuCreateCount = 200;
-        public const int CustomizeMenuQueryCount  = 200;
-        public const int CustomizeMenuDeleteCount = 200;
+        public const int CustomizeMenuCreateCount = 100;
+        public const int CustomizeMenuQueryCount  = 1000;
+        public const int CustomizeMenuDeleteCount = 100;
     }
 }
 
