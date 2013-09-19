@@ -11,12 +11,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.MenuUtil", "src\W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.Distribution", "src\WeChatSdk.Distribution\WeChatSdk.Distribution.csproj", "{261669C0-A096-47E7-881E-67352A46095B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.Core", "src\WeChatSdk.Core\WeChatSdk.Core.csproj", "{0BB09FFE-26FC-44F4-9B15-742E196C2122}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Release|Any CPU.Build.0 = Release|Any CPU
 		{261669C0-A096-47E7-881E-67352A46095B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{261669C0-A096-47E7-881E-67352A46095B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{261669C0-A096-47E7-881E-67352A46095B}.Release|Any CPU.ActiveCfg = Release|Any CPU
