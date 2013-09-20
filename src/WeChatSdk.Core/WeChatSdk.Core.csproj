@@ -56,6 +56,9 @@
     <Compile Include="Menu\Actions\QueryMenuRequest.cs" />
     <Compile Include="Menu\Actions\QueryMenuResponse.cs" />
     <Compile Include="Menu\Actions\DeleteMenuRequest.cs" />
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
