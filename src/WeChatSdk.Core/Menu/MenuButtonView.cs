@@ -21,7 +21,6 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.Collections.Generic;
 
 namespace WeChatSdk.Core
 {
@@ -33,8 +32,10 @@ namespace WeChatSdk.Core
             } 
         }
 
-        public string key{ get; set; }
+        public string url { get; set; }
 
-        public IList<MenuButtonBase> sub_button{ get; set; }
+        public override bool IsValid() {
+            return true;
+        }
     }
 }
