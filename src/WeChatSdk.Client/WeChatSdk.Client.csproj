@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WeChatSdk</RootNamespace>
-    <AssemblyName>WeChatSdk</AssemblyName>
+    <RootNamespace>WeChatSdk.Client</RootNamespace>
+    <AssemblyName>WeChatSdk.Client</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

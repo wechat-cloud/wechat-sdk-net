@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk", "src\WeChatSdk\WeChatSdk.csproj", "{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.Client", "src\WeChatSdk.Client\WeChatSdk.Client.csproj", "{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.Hosting", "src\WeChatSdk.Hosting\WeChatSdk.Hosting.csproj", "{5E936FE8-85CE-4CE4-AEAE-D5301AD0BA2E}"
 EndProject
@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.Distribution", "src\WeChatSdk.Distribution\WeChatSdk.Distribution.csproj", "{261669C0-A096-47E7-881E-67352A46095B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSdk.Core", "src\WeChatSdk.Core\WeChatSdk.Core.csproj", "{0BB09FFE-26FC-44F4-9B15-742E196C2122}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{E9F10BD4-C250-4B27-AF8A-7F05EF777570}"
+	ProjectSection(SolutionItems) = preProject
+		src\GlobalAssemblyInfo.cs = src\GlobalAssemblyInfo.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +48,8 @@ Global
 		{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = src\WeChatSdk.Tests\WeChatSdk.Tests.csproj

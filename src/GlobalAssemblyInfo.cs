@@ -23,8 +23,9 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-// Information about this assembly is defined by the following attributes. 
-// Change them to the values specific to your project.
-[assembly: AssemblyTitle("WeChatSdk.Distribution")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("wechat-net-sdk")]
+[assembly: AssemblyCopyright("lurongkai")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion("0.5.*")]
