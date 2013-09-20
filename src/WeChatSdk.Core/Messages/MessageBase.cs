@@ -24,10 +24,10 @@ using System;
 
 namespace WeChatSdk.Core
 {
-	public class MessageBase
-	{
-		public MessageBase() {
-		}
-	}
+    public class MessageBase
+    {
+        public MessageBase() {
+        }
+    }
 }
 

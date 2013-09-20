@@ -24,9 +24,9 @@ using System;
 
 namespace WeChatSdk
 {
-	public class WeChatClient
-	{
+    public class WeChatClient
+    {
 
-	}
+    }
 }
 

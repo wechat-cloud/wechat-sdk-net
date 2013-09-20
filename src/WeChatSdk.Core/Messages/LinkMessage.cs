@@ -43,10 +43,10 @@ namespace WeChatSdk.Core
     /// Description     消息描述
     /// Url             消息链接
     /// MsgId           消息id，64位整型
-	public class LinkMessage
-	{
-		public LinkMessage() {
-		}
-	}
+    public class LinkMessage
+    {
+        public LinkMessage() {
+        }
+    }
 }
 

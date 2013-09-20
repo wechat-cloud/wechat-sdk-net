@@ -26,8 +26,8 @@ namespace WeChatSdk.Core
 {
     public class MenuButtonClick : MenuButtonBase
     {
-        public override string type{ 
-            get{
+        public override string type { 
+            get {
                 return "click";
             } 
         }
@@ -35,4 +35,3 @@ namespace WeChatSdk.Core
         public string url{ get; set; }
     }
 }
-

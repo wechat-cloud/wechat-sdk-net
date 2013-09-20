@@ -43,4 +43,3 @@ namespace WeChatSdk.Core
         }
     }
 }
-

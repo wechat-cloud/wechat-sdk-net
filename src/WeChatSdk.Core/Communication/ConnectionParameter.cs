@@ -28,10 +28,9 @@ namespace WeChatSdk.Core
     /// timestamp    时间戳
     /// nonce    随机数
     /// echostr  随机字符串
-	public class MessageResponse
-	{
-		public MessageResponse() {
-		}
-	}
+    public class MessageResponse
+    {
+        public MessageResponse() {
+        }
+    }
 }
-

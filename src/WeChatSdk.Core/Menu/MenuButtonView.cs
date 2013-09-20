@@ -38,4 +38,3 @@ namespace WeChatSdk.Core
         public IList<MenuButtonBase> sub_button{ get; set; }
     }
 }
-

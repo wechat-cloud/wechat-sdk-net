@@ -30,4 +30,3 @@ namespace WeChatSdk.Core
         public MenuButtonBase[] button{ get; set; }
     }
 }
-

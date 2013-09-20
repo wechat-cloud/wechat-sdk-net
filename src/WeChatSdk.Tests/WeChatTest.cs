@@ -24,10 +24,9 @@ using System;
 
 namespace WeChat.Sdk.Tests
 {
-	public class WeChatTest
-	{
-		public void Empty() {
-		}
-	}
+    public class WeChatTest
+    {
+        public void Empty() {
+        }
+    }
 }
-

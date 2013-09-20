@@ -26,8 +26,8 @@ namespace WeChatSdk.Core
 {
     public abstract class MenuButtonBase
     {
-        public string name { get; set;}
-        public abstract string type { get;}
+        public string name { get; set; }
+
+        public abstract string type { get; }
     }
 }
-

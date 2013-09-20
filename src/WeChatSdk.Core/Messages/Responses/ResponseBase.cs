@@ -24,10 +24,9 @@ using System;
 
 namespace WeChatSdk.Core
 {
-	public class ResponseBase
-	{
-		public ResponseBase() {
-		}
-	}
+    public class ResponseBase
+    {
+        public ResponseBase() {
+        }
+    }
 }
-

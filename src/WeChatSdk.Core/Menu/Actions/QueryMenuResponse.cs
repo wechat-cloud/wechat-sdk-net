@@ -29,4 +29,3 @@ namespace WeChatSdk.Core
         public MpMenu mene{ get; set; }
     }
 }
-

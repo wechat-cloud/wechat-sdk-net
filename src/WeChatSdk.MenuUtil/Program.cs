@@ -24,10 +24,10 @@ using System;
 
 namespace WeChat.Sdk.MenuUtil
 {
-	class MainClass
-	{
-		public static void Main(string[] args) {
-			Console.WriteLine("WeChat Menu Customization Tool.");
-		}
-	}
+    class MainClass
+    {
+        public static void Main(string[] args) {
+            Console.WriteLine("WeChat Menu Customization Tool.");
+        }
+    }
 }

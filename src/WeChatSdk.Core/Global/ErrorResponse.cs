@@ -27,7 +27,7 @@ namespace WeChatSdk.Core
     public class ErrorCode
     {
         public int errcode{ get; private set; }
+
         public string errmsg{ get; private set; }
     }
 }
-

@@ -28,7 +28,6 @@ namespace WeChatSdk.Core
     /// https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN
     public class CreateMenuRequest
     {
-        public MpMenu MenuToCreate{get;set;}
+        public MpMenu MenuToCreate{ get; set; }
     }
 }
-

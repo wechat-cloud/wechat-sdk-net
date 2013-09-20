@@ -43,10 +43,9 @@ namespace WeChatSdk.Core
     /// MsgType         music
     /// MusicUrl        音乐链接
     /// HQMusicUrl      高质量音乐链接，WIFI环境优先使用该链接播放音乐
-	public class MusicMessageResponse
-	{
-		public MusicMessageResponse() {
-		}
-	}
+    public class MusicMessageResponse
+    {
+        public MusicMessageResponse() {
+        }
+    }
 }
-

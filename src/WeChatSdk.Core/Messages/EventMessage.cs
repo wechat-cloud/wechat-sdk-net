@@ -38,10 +38,10 @@ namespace WeChatSdk.Core
     /// MsgType	 		消息类型，event
     /// Event	 		事件类型，subscribe(订阅)、unsubscribe(取消订阅)、CLICK(自定义菜单点击事件)
     /// EventKey	 	事件KEY值，与自定义菜单接口中KEY值对应
-	public class EventMessage
-	{
-		public EventMessage() {
-		}
-	}
+    public class EventMessage
+    {
+        public EventMessage() {
+        }
+    }
 }
 
