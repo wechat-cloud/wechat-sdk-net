@@ -1,5 +1,5 @@
 //
-//  MyClass.cs
+//  ITokenService.cs
 //
 //  Author:
 //       lurongkai <lurongkai@gmail.com>
@@ -21,11 +21,13 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using WeChatSdk.Core;
 
-namespace WeChatSdk
+namespace WeChatSdk.Client
 {
-    public class WeChatClient
+    public interface ITokenService
     {
+        AccessToken GetAccessToken(string token, string appId, string appSecret);
     }
 }
 

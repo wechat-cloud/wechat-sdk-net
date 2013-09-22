@@ -43,6 +43,8 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Authentication\ITokenService.cs" />
+    <Compile Include="Authentication\DefaultTokenService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -50,5 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Authentication\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeChatSdk.Core\WeChatSdk.Core.csproj">
+      <Project>{0BB09FFE-26FC-44F4-9B15-742E196C2122}</Project>
+      <Name>WeChatSdk.Core</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
