@@ -45,6 +45,7 @@
     </Compile>
     <Compile Include="Authentication\ITokenService.cs" />
     <Compile Include="Authentication\DefaultTokenService.cs" />
+    <Compile Include="ClientSetting.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

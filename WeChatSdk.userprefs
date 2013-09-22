@@ -3,13 +3,7 @@
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="WeChatSdk.Client" expanded="True">
-            <Node name="Authentication" expanded="True">
-              <Node name="DefaultTokenService.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" />
       </Pad>
       <Pad Id="ClassPad">
         <State expanded="True" selected="True" />
