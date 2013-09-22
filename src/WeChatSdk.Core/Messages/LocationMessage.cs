@@ -45,10 +45,15 @@ namespace WeChatSdk.Core
     /// Scale	 		地图缩放大小
     /// Label	 		地理位置信息
     /// MsgId	 		消息id，64位整型
-    public class LocationMessage
+    public class LocationMessage : SimpleMessage
     {
-        public LocationMessage() {
-        }
+        public string Location_X { get; set; }
+
+        public string Location_Y { get; set; }
+
+        public string Scale { get; set; }
+
+        public string Label { get; set; }
     }
 }
 

@@ -1,9 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/WeChatSdk.Core/Messages/EventMessage.cs">
+    <Files>
+      <File FileName="src/WeChatSdk.Core/Messages/EventMessage.cs" Line="46" Column="6" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State />
+        <State expanded="True">
+          <Node name="WeChatSdk.Client" expanded="True" />
+          <Node name="WeChatSdk.Core" expanded="True">
+            <Node name="Communication" expanded="True" />
+            <Node name="Messages" expanded="True">
+              <Node name="EventMessage.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
       </Pad>
       <Pad Id="ClassPad">
         <State selected="True" />

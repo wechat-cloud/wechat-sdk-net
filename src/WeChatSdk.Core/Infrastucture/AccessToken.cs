@@ -24,11 +24,12 @@ using System;
 
 namespace WeChatSdk.Core
 {
-    /// access_token     获取到的凭证
-    /// expires_in   凭证有效时间，单位：秒
+    /// access_token    获取到的凭证
+    /// expires_in      凭证有效时间，单位：秒
     public class AccessToken
     {
-        public AccessToken() {
-        }
+        public string access_token { get; set; }
+
+        public int expires_in { get; set; }
     }
 }

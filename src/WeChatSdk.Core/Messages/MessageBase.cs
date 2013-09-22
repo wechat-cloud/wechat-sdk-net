@@ -24,10 +24,15 @@ using System;
 
 namespace WeChatSdk.Core
 {
-    public class MessageBase
+    public abstract class MessageBase
     {
-        public MessageBase() {
-        }
+        public string ToUserName { get; set; }
+
+        public string FromUserName { get; set; }
+
+        public DateTime CreateTime { get; set; }
+
+        public string MsgType { get; set; }
     }
 }
 

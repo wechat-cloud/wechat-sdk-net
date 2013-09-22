@@ -39,10 +39,9 @@ namespace WeChatSdk.Core
     /// MsgType	 		image
     /// PicUrl	 		图片链接
     /// MsgId	 		消息id，64位整型
-    public class ImageMessage
+    public class ImageMessage : SimpleMessage
     {
-        public ImageMessage() {
-        }
+        public string PicUrl { get; set; }
     }
 }
 
