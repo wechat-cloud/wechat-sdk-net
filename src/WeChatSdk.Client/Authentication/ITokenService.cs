@@ -23,7 +23,7 @@
 using System;
 using WeChatSdk.Core;
 
-namespace WeChatSdk.Client
+namespace WeChatSdk.Client.Authentication
 {
     public interface ITokenService
     {

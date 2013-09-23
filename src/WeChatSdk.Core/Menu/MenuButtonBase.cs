@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Menu
 {
     /// http请求方式：POST
     /// https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN

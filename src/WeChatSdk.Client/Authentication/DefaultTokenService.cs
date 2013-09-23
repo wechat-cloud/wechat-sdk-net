@@ -25,7 +25,7 @@ using WeChatSdk.Core;
 using RestSharp;
 using RestSharp.Extensions;
 
-namespace WeChatSdk.Client
+namespace WeChatSdk.Client.Authentication
 {
     public class DefaultTokenService : ITokenService
     {

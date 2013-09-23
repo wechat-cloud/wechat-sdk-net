@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Messages
 {
     /// <xml>
     /// <ToUserName><![CDATA[toUser]]></ToUserName>

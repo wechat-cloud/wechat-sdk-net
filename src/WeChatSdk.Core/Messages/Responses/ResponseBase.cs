@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Messages.Responses
 {
     public class ResponseBase
     {

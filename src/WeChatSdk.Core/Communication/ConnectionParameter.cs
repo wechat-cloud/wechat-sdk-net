@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Communication
 {
     /// signature    微信加密签名
     /// timestamp    时间戳

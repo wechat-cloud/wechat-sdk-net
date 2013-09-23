@@ -23,7 +23,7 @@
 using System;
 using WeChatSdk.Core;
 
-namespace WeChatSdk.Tests
+namespace WeChatSdk.Tests.Menu
 {
     public class MenuBuilderTest
     {

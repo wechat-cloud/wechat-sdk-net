@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Menu.Actions
 {
     /// http请求方式：GET
     /// https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN

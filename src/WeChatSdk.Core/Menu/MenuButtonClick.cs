@@ -23,7 +23,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Menu
 {
     public class MenuButtonClick : MenuButtonBase
     {

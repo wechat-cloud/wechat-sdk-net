@@ -23,7 +23,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Core.Menu
 {
     public class MenuButtonView : MenuButtonBase
     {
