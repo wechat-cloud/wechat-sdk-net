@@ -1,5 +1,5 @@
 //
-//  MenuButtonLink.cs
+//  MenuParser.cs
 //
 //  Author:
 //       lurongkai <lurongkai@gmail.com>
@@ -21,30 +21,13 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.Text.RegularExpressions;
 
 namespace WeChatSdk.Core
 {
-    public class MenuButtonView : MenuButtonBase
+    public class MenuParser
     {
-        public MenuButtonView(string buttonName, string buttonUrl): base(buttonName) {
-            if (!Regex.IsMatch(buttonUrl, @"")) {
-                throw new ArgumentException("invalid url format");
-            }
-
-            url = buttonUrl;
-        }
-
-        public override string type { 
-            get {
-                return "view";
-            } 
-        }
-
-        public string url { get; set; }
-
-        public override bool IsValid() {
-            return true;
+        public MenuParser() {
         }
     }
 }
+

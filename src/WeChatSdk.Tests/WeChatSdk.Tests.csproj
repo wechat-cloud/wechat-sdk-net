@@ -37,9 +37,23 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeChatTest.cs" />
+    <Compile Include="Menu\MenuBuilderTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeChatSdk.Core\WeChatSdk.Core.csproj">
+      <Project>{0BB09FFE-26FC-44F4-9B15-742E196C2122}</Project>
+      <Name>WeChatSdk.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeChatSdk.Client\WeChatSdk.Client.csproj">
+      <Project>{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}</Project>
+      <Name>WeChatSdk.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Menu\" />
   </ItemGroup>
 </Project>

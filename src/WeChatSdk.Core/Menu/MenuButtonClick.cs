@@ -27,21 +27,41 @@ namespace WeChatSdk.Core
 {
     public class MenuButtonClick : MenuButtonBase
     {
+        public MenuButtonClick(string buttonName, string buttonKey): base(buttonName) {
+            // TODO: button key validator.
+
+            key = buttonKey;
+        }
+
+        private List<MenuButtonBase> _subButtons = new List<MenuButtonBase>();
+
         public override string type { 
             get {
                 return "click";
             } 
         }
 
-        public string key{ get; set; }
+        public string key { get; set; }
 
-        public IList<MenuButtonBase> sub_button{ get; set; }
+        public MenuButtonBase[] sub_button { 
+            get {
+                return _subButtons.ToArray();
+            }
+        }
 
         public override bool IsValid() {
             return 
                 base.IsValid() &&
-                (sub_button.Count == 0 || sub_button.Count >= 2 && sub_button.Count <= 5) &&
+                (_subButtons.Count == 0 || _subButtons.Count >= 2 && _subButtons.Count <= 5) &&
                 key.Length <= 128;
+        }
+
+        public void AddSubButton(MenuButtonBase newSubButton) {
+            if (_subButtons.Count == 5) {
+                throw new InvalidOperationException("Sub-button count limited to 5.");
+            }
+
+            _subButtons.Add(newSubButton);
         }
     }
 }

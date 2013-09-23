@@ -27,6 +27,20 @@ namespace WeChatSdk.Core
 {
     public class MpMenu
     {
-        public MenuButtonBase[] button{ get; set; }
+        private List<MenuButtonBase> _buttons = new List<MenuButtonBase>();
+
+        public MenuButtonBase[] button { 
+            get {
+                return _buttons.ToArray();
+            }
+        }
+
+        internal void AddButton(MenuButtonBase newButton) {
+            if (_buttons.Count == 3) {
+                throw new InvalidOperationException("top menu button count limited to 3");
+            }
+
+            _buttons.Add(newButton);
+        }
     }
 }

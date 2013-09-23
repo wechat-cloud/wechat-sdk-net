@@ -34,6 +34,14 @@ namespace WeChatSdk.Core
     /// key         类型为click时必须     按钮KEY值，用于消息接口(event类型)推送，不超过128字节
     public abstract class MenuButtonBase
     {
+        public MenuButtonBase(string buttonName) {
+            if (string.IsNullOrEmpty(buttonName)) {
+                throw new ArgumentNullException("buttonName", "button name is now allowed to be null or empty.");
+            }
+
+            name = buttonName;
+        }
+
         public string name { get; set; }
 
         public abstract string type { get; }

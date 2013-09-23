@@ -1,5 +1,5 @@
 //
-//  MenuButtonLink.cs
+//  MenuBuilderTest.cs
 //
 //  Author:
 //       lurongkai <lurongkai@gmail.com>
@@ -21,30 +21,20 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.Text.RegularExpressions;
+using WeChatSdk.Core;
 
-namespace WeChatSdk.Core
+namespace WeChatSdk.Tests
 {
-    public class MenuButtonView : MenuButtonBase
+    public class MenuBuilderTest
     {
-        public MenuButtonView(string buttonName, string buttonUrl): base(buttonName) {
-            if (!Regex.IsMatch(buttonUrl, @"")) {
-                throw new ArgumentException("invalid url format");
-            }
-
-            url = buttonUrl;
-        }
-
-        public override string type { 
-            get {
-                return "view";
-            } 
-        }
-
-        public string url { get; set; }
-
-        public override bool IsValid() {
-            return true;
+        public void TestBuilderApi() {
+            MenuBuilder.Create()
+                .AddClickButton("click-button1", "subscribe")
+                .AddViewButton("view-button1", @"http://lurongkai.github.io")
+                .AddClickButton("click-button2", button =>
+                    button.AddClickButton("sub-click1", "S1")
+                          .AddViewButton("sub-view1", @"http://weibo.com/lengleng3898"));
         }
     }
 }
+

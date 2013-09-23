@@ -62,6 +62,8 @@
     <Compile Include="AccessToken.cs" />
     <Compile Include="Infrastucture\ISerializer.cs" />
     <Compile Include="Infrastucture\IDeserializer.cs" />
+    <Compile Include="Menu\Builder\MenuBuilder.cs" />
+    <Compile Include="Menu\Builder\MenuParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -73,6 +75,7 @@
     <Folder Include="Menu\" />
     <Folder Include="Menu\Actions\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Menu\Builder\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Global\ErrorDoc.txt" />
