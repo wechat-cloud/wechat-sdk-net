@@ -1,5 +1,5 @@
 //
-//  LinkMessage.cs
+//  ImageMessage.cs
 //
 //  Author:
 //       lurongkai <lurongkai@gmail.com>
@@ -22,34 +22,32 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Messages
+namespace WechatCloud.Core.Messages
 {
     /// <xml>
     /// <ToUserName><![CDATA[toUser]]></ToUserName>
     /// <FromUserName><![CDATA[fromUser]]></FromUserName>
-    /// <CreateTime>1351776360</CreateTime>
-    /// <MsgType><![CDATA[link]]></MsgType>
-    /// <Title><![CDATA[公众平台官网链接]]></Title>
-    /// <Description><![CDATA[公众平台官网链接]]></Description>
-    /// <Url><![CDATA[url]]></Url>
+    /// <CreateTime>1348831860</CreateTime>
+    /// <MsgType><![CDATA[image]]></MsgType>
+    /// <PicUrl><![CDATA[this is a url]]></PicUrl>
     /// <MsgId>1234567890123456</MsgId>
-    /// </xml> 
-    /// 参数              描述
-    /// ToUserName      接收方微信号
-    /// FromUserName    发送方微信号，若为普通用户，则是一个OpenID
-    /// CreateTime      消息创建时间
-    /// MsgType         消息类型，link
-    /// Title           消息标题
-    /// Description     消息描述
-    /// Url             消息链接
-    /// MsgId           消息id，64位整型
-    public class LinkMessage : SimpleMessage
-    {    
-        public string Title { get; set; }
+    /// </xml>
+    /// 参数				描述
+    /// ToUserName		开发者微信号
+    /// FromUserName	发送方帐号（一个OpenID）
+    /// CreateTime	 	消息创建时间 （整型）
+    /// MsgType	 		image
+    /// PicUrl	 		图片链接
+    /// MsgId	 		消息id，64位整型
+    public class ImageMessage : GeneralMessage
+    {
+        public string PicUrl { get; private set; }
 
-        public string Description { get; set; }
-
-        public string Url { get; set; }
+        public override string MsgType {
+            get {
+                return "image";
+            }
+        }
     }
 }
 

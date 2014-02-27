@@ -1,10 +1,10 @@
-//
-//  MessageBase.cs
+﻿//
+//  GeneralMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,13 +24,9 @@ using System;
 
 namespace WechatCloud.Core.Messages
 {
-    public abstract class MessageBase
+    public abstract class GeneralMessage : MessageBase
     {
-        public string ToUserName { get; protected set; }
-        public string FromUserName { get; protected set; }
-        public DateTimeOffset CreateTime { get; protected set; }
-
-        public virtual string MsgType { get; protected set; }
+        public long MsgId { get; protected set; }
     }
 }
 

@@ -1,10 +1,10 @@
-//
-//  MessageBase.cs
+﻿//
+//  MessageValidationToken.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,15 +22,18 @@
 //
 using System;
 
-namespace WechatCloud.Core.Messages
+namespace WeChatSdk.Core
 {
-    public abstract class MessageBase
+    public class MessageValidationToken
     {
-        public string ToUserName { get; protected set; }
-        public string FromUserName { get; protected set; }
-        public DateTimeOffset CreateTime { get; protected set; }
-
-        public virtual string MsgType { get; protected set; }
+        // 微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。
+        public string signature{ get; set;}
+        // 时间戳
+        public string timestamp { get; set;}
+        // 随机数
+        public string nonce { get; set; }
+        // 随机字符串
+        public string echostr { get; set;}
     }
 }
 

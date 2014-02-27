@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Messages
+namespace WechatCloud.Core.Messages
 {
     /// <xml><ToUserName><![CDATA[toUser]]></ToUserName>
     /// <FromUserName><![CDATA[FromUser]]></FromUserName>
@@ -40,9 +40,7 @@ namespace WeChatSdk.Core.Messages
     /// EventKey	 	事件KEY值，与自定义菜单接口中KEY值对应
     public abstract class EventMessage : MessageBase
     {
-        public string Event { get; set; }
-
-        public string EventKey { get; set; }
+        public virtual string Event { get; protected set; }
     }
 }
 

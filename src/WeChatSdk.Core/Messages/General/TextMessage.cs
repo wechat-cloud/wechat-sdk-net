@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Messages
+namespace WechatCloud.Core.Messages
 {
     /// <xml>
     /// <ToUserName><![CDATA[toUser]]></ToUserName>
@@ -40,9 +40,15 @@ namespace WeChatSdk.Core.Messages
     /// MsgType	 		text
     /// Content	 		文本消息内容
     /// MsgId	 		消息id，64位整型
-    public class TextMessage : SimpleMessage
+    public class TextMessage : GeneralMessage
     {
-        public string Content { get; set; }
+        public string Content { get; private set; }
+
+        public override string MsgType {
+            get {
+                return "text";
+            }
+        } 
     }
 }
 

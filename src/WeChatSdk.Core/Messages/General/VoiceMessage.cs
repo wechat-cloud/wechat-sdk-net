@@ -1,10 +1,10 @@
-//
-//  MessageBase.cs
+﻿//
+//  VoiceMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,13 +24,17 @@ using System;
 
 namespace WechatCloud.Core.Messages
 {
-    public abstract class MessageBase
+    public class VoiceMessage : GeneralMessage
     {
-        public string ToUserName { get; protected set; }
-        public string FromUserName { get; protected set; }
-        public DateTimeOffset CreateTime { get; protected set; }
+        public string MediaId { get; private set; }
 
-        public virtual string MsgType { get; protected set; }
+        public string Format { get; private set; }
+
+        public override string MsgType {
+            get {
+                return "voice";
+            }
+        }
     }
 }
 

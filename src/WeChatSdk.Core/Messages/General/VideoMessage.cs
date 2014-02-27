@@ -1,10 +1,10 @@
-//
-//  SimpleMessage.cs
+﻿//
+//  VideoMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,11 +22,18 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Messages
+namespace WechatCloud.Core.Messages
 {
-    public abstract class SimpleMessage : MessageBase
+    public class VideoMessage : GeneralMessage
     {
-        public long MsgId { get; set; }
+        public string MediaId { get; private set; }
+        public string ThumbMediaId { get; private set; }
+
+        public override string MsgType {
+            get {
+                return "video";
+            }
+        }
     }
 }
 
