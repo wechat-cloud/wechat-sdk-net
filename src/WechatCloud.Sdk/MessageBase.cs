@@ -21,6 +21,8 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.IO;
+using System.Text;
 
 namespace WechatCloud.Sdk
 {
@@ -31,6 +33,14 @@ namespace WechatCloud.Sdk
         public DateTimeOffset CreateTime { get; protected set; }
 
         public virtual string MsgType { get; protected set; }
+
+        internal virtual void Rendering(Stream stream) {
+            var serializer = Registry.Instance.Resolve<ISerializer>();
+            var content = serializer.Serialize(this);
+
+            var bytes = Encoding.Unicode.GetBytes(content);
+            stream.Write(bytes, 0, bytes.Length);
+        }
     }
 }
 

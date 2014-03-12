@@ -1,10 +1,10 @@
-//
-//  IDeserializer.cs
+﻿//
+//  ResMusicMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,9 +24,15 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public interface IDeserializer
+    public class OutMusicMessage : MessageBase
     {
-        T Deserialize<T>(string content) where T : class;
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public string MusicURL { get; private set; }
+        public string HQMusicUrl { get; private set; }
+        public string ThumbMediaId { get; private set; }
+
+        public override string MsgType { get { return "music"; } } 
     }
 }
 

@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Infrastructure
+namespace WechatCloud.Sdk
 {
     public interface ISerializer
     {

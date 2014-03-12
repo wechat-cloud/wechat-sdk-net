@@ -1,10 +1,10 @@
-//
-//  IDeserializer.cs
+﻿//
+//  ResImageTextMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,12 +21,20 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.Collections.Generic;
 
 namespace WechatCloud.Sdk
 {
-    public interface IDeserializer
+    public class OutImageTextMessage : MessageBase
     {
-        T Deserialize<T>(string content) where T : class;
+        public int ArticleCount { get; private set; }
+        public List<string> Articles { get; private set; }
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public string PicUrl { get; private set; }
+        public string Url { get; private set; }
+
+        public override string MsgType { get { return "news"; } } 
     }
 }
 

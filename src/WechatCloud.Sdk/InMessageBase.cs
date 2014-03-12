@@ -1,10 +1,10 @@
-//
-//  IDeserializer.cs
+﻿//
+//  InMessageBase.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,9 +24,8 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public interface IDeserializer
+    public class InMessageBase : MessageBase
     {
-        T Deserialize<T>(string content) where T : class;
     }
 }
 

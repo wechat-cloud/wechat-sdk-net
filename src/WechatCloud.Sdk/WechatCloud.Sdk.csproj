@@ -36,44 +36,48 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Messages\Responses\ResponseBase.cs" />
-    <Compile Include="Messages\Responses\MusicMessageResponse.cs" />
-    <Compile Include="Messages\Responses\TextMessageResponse.cs" />
-    <Compile Include="Messages\Responses\NewsMessageResponse.cs" />
-    <Compile Include="Communication\ConnectionParameter.cs" />
-    <Compile Include="Communication\AccessTokenRetrieve.cs" />
     <Compile Include="Global\ErrorResponse.cs" />
     <Compile Include="Global\ApiInvocationLimitation.cs" />
-    <Compile Include="AccessToken.cs" />
-    <Compile Include="MessageValidationToken.cs" />
     <Compile Include="WechatDemon.cs" />
-    <Compile Include="Event\CustomEvent.cs" />
-    <Compile Include="Event\EventCode.cs" />
-    <Compile Include="Event\LocationBoardcastEvent.cs" />
-    <Compile Include="Event\QRScanSubscribedUserEvent.cs" />
-    <Compile Include="Event\QRScenUnsubscribedUserEvent.cs" />
-    <Compile Include="Event\SubscribeUnsubscribeEvent.cs" />
-    <Compile Include="General\ImageMessage.cs" />
-    <Compile Include="General\LinkMessage.cs" />
-    <Compile Include="General\LocationMessage.cs" />
-    <Compile Include="General\TextMessage.cs" />
-    <Compile Include="General\VideoMessage.cs" />
-    <Compile Include="General\VoiceMessage.cs" />
-    <Compile Include="SpeechRecognition\SpeechRecognition.cs" />
-    <Compile Include="GeneralMessageBase.cs" />
-    <Compile Include="EventBase.cs" />
     <Compile Include="MessageBase.cs" />
     <Compile Include="Core\ISerializer.cs" />
     <Compile Include="Core\IDeserializer.cs" />
+    <Compile Include="Core\Communication\AccessTokenRetrieve.cs" />
+    <Compile Include="Core\Communication\ConnectionParameter.cs" />
+    <Compile Include="Incoming\General\ImageMessage.cs" />
+    <Compile Include="Incoming\General\LinkMessage.cs" />
+    <Compile Include="Incoming\General\LocationMessage.cs" />
+    <Compile Include="Incoming\General\TextMessage.cs" />
+    <Compile Include="Incoming\General\VoiceMessage.cs" />
+    <Compile Include="Incoming\Event\CustomEvent.cs" />
+    <Compile Include="Incoming\Event\EventCode.cs" />
+    <Compile Include="Incoming\Event\LocationBoardcastEvent.cs" />
+    <Compile Include="Incoming\Event\QRScanSubscribedUserEvent.cs" />
+    <Compile Include="Incoming\Event\QRScenUnsubscribedUserEvent.cs" />
+    <Compile Include="Incoming\Event\SubscribeUnsubscribeEvent.cs" />
+    <Compile Include="Incoming\SpeechRecognition\SpeechRecognition.cs" />
+    <Compile Include="Incoming\General\ResVideoMessage.cs" />
+    <Compile Include="OutMessageBase.cs" />
+    <Compile Include="InMessageBase.cs" />
+    <Compile Include="Incoming\GeneralMessageBase.cs" />
+    <Compile Include="Incoming\EventBase.cs" />
+    <Compile Include="Global\AccessToken.cs" />
+    <Compile Include="Global\MessageValidationToken.cs" />
+    <Compile Include="Outgoing\OutImageMessage.cs" />
+    <Compile Include="Outgoing\OutImageTextMessage.cs" />
+    <Compile Include="Outgoing\OutManualMessage.cs" />
+    <Compile Include="Outgoing\OutMusicMessage.cs" />
+    <Compile Include="Outgoing\OutTextMessage.cs" />
+    <Compile Include="Outgoing\OutVideoMessage.cs" />
+    <Compile Include="Outgoing\OutVoiceMessage.cs" />
+    <Compile Include="Core\Registry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Messages\" />
-    <Folder Include="Messages\Responses\" />
-    <Folder Include="Communication\" />
     <Folder Include="Global\" />
-    <Folder Include="Exceptions\" />
     <Folder Include="Core\" />
+    <Folder Include="Incoming\" />
+    <Folder Include="Outgoing\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Global\ErrorDoc.txt" />

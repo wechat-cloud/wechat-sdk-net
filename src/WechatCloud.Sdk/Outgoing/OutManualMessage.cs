@@ -1,10 +1,10 @@
-//
-//  IDeserializer.cs
+﻿//
+//  ResManualMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,12 +21,22 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.IO;
+using System.Text;
 
 namespace WechatCloud.Sdk
 {
-    public interface IDeserializer
+    public class OutManualMessage : MessageBase
     {
-        T Deserialize<T>(string content) where T : class;
+        public override string MsgType { get { throw new InvalidOperationException("unavailable"); } } 
+
+        internal override void Rendering(Stream stream) {
+            var serializer = Registry.Instance.Resolve<ISerializer>();
+            var content = "";
+
+            var bytes = Encoding.Unicode.GetBytes(content);
+            stream.Write(bytes, 0, bytes.Length);
+        }
     }
 }
 
