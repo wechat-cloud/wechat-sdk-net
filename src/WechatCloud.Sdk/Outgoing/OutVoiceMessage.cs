@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class OutVoiceMessage : MessageBase
+    public class OutVoiceMessage : OutMessageBase
     {
         public string MediaId { get; private set; }
 

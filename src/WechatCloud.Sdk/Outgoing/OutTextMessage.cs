@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class ResTextMessage : MessageBase
+    public class ResTextMessage : OutMessageBase
     {
         public string Content { get; private set; }
 

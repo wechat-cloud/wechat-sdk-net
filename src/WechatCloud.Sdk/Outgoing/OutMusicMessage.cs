@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class OutMusicMessage : MessageBase
+    public class OutMusicMessage : OutMessageBase
     {
         public string Title { get; private set; }
         public string Description { get; private set; }

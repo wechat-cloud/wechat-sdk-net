@@ -26,7 +26,7 @@ using System.Text;
 
 namespace WechatCloud.Sdk
 {
-    public class OutManualMessage : MessageBase
+    public class OutManualMessage : OutMessageBase
     {
         public override string MsgType { get { throw new InvalidOperationException("unavailable"); } } 
 

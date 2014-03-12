@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class OutImageMessage : MessageBase
+    public class OutImageMessage : OutMessageBase
     {
         public string MediaId { get; private set; }
 

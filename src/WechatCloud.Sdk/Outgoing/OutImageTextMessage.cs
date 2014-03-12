@@ -25,7 +25,7 @@ using System.Collections.Generic;
 
 namespace WechatCloud.Sdk
 {
-    public class OutImageTextMessage : MessageBase
+    public class OutImageTextMessage : OutMessageBase
     {
         public int ArticleCount { get; private set; }
         public List<string> Articles { get; private set; }

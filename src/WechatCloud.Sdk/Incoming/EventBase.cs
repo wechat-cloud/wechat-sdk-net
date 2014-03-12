@@ -38,7 +38,7 @@ namespace WechatCloud.Sdk
     /// MsgType	 		消息类型，event
     /// Event	 		事件类型，subscribe(订阅)、unsubscribe(取消订阅)、CLICK(自定义菜单点击事件)
     /// EventKey	 	事件KEY值，与自定义菜单接口中KEY值对应
-    public abstract class EventBase : MessageBase
+    public abstract class EventBase : InMessageBase
     {
         public virtual string Event { get; protected set; }
         public override string MsgType { get { return "event"; } }

@@ -24,11 +24,14 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon
+    public class WechatDemon : IDisposable
     {
         private readonly int nonce;
 
-        public WechatDemon() {
+        public WechatDemon() { }
+
+        public void Dispose() {
+            throw new NotImplementedException();
         }
     }
 }

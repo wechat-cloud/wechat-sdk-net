@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class SpeechRecognition : MessageBase
+    public class SpeechRecognition : InMessageBase
     {
         public string MediaId { get; private set; }
         public string Format { get { return "amr"; } }

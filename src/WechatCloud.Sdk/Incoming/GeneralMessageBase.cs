@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public abstract class GeneralMessageBase : MessageBase
+    public abstract class GeneralMessageBase : InMessageBase
     {
         public long MsgId { get; protected set; }
     }

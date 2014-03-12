@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class OutVideoMessage : MessageBase
+    public class OutVideoMessage : OutMessageBase
     {
         public string MediaId { get; private set; }
         public string Title { get; private set; }

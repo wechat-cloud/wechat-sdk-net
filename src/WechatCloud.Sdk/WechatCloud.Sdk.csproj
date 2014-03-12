@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Global\ErrorResponse.cs" />
-    <Compile Include="Global\ApiInvocationLimitation.cs" />
     <Compile Include="WechatDemon.cs" />
     <Compile Include="MessageBase.cs" />
     <Compile Include="Core\ISerializer.cs" />
@@ -61,7 +60,6 @@
     <Compile Include="InMessageBase.cs" />
     <Compile Include="Incoming\GeneralMessageBase.cs" />
     <Compile Include="Incoming\EventBase.cs" />
-    <Compile Include="Global\AccessToken.cs" />
     <Compile Include="Global\MessageValidationToken.cs" />
     <Compile Include="Outgoing\OutImageMessage.cs" />
     <Compile Include="Outgoing\OutImageTextMessage.cs" />
@@ -75,6 +73,8 @@
     <Compile Include="Media\MediaUploadRequest.cs" />
     <Compile Include="Media\MediaUploadResponse.cs" />
     <Compile Include="Media\MediaDownloadRequest.cs" />
+    <Compile Include="Core\AccessToken.cs" />
+    <Compile Include="Global\Limitation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
