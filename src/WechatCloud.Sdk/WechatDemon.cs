@@ -26,7 +26,7 @@ namespace WechatCloud.Sdk
 {
     public class WechatDemon
     {
-        private int readonly nonce;
+        private readonly int nonce;
 
         public WechatDemon() {
         }

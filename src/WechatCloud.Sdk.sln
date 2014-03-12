@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatCloud.Sdk", "src\WechatCloud.Sdk\WechatCloud.Sdk.csproj", "{0BB09FFE-26FC-44F4-9B15-742E196C2122}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatCloud.Sdk", "WechatCloud.Sdk\WechatCloud.Sdk.csproj", "{0BB09FFE-26FC-44F4-9B15-742E196C2122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
