@@ -26,7 +26,7 @@ namespace WechatCloud.Sdk
 {
     public class SubscribeUnsubscribeEvent : EventBase
     {
-        public string Event { get; private set; }
+        public override string Event { get; protected set; }
     }
 }
 
