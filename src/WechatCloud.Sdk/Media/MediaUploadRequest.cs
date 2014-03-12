@@ -1,5 +1,5 @@
 ﻿//
-//  ResManualMessage.cs
+//  MediaUploadRequest.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,21 +21,14 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.IO;
-using System.Text;
 
 namespace WechatCloud.Sdk
 {
-    public class OutManualMessage : MessageBase
+    public class MediaUploadRequest
     {
-        public override string MsgType { get { throw new InvalidOperationException("unavailable"); } } 
-
-        internal override void Rendering(Stream stream) {
-            var content = "";
-
-            var bytes = Encoding.Unicode.GetBytes(content);
-            stream.Write(bytes, 0, bytes.Length);
-        }
+        public string access_token { get; set; }
+        public MediaType type { get; set; }
+        public string media { get; set; }
     }
 }
 

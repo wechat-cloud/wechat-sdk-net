@@ -71,6 +71,10 @@
     <Compile Include="Outgoing\OutVideoMessage.cs" />
     <Compile Include="Outgoing\OutVoiceMessage.cs" />
     <Compile Include="Core\Registry.cs" />
+    <Compile Include="Media\MediaType.cs" />
+    <Compile Include="Media\MediaUploadRequest.cs" />
+    <Compile Include="Media\MediaUploadResponse.cs" />
+    <Compile Include="Media\MediaDownloadRequest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -78,6 +82,7 @@
     <Folder Include="Core\" />
     <Folder Include="Incoming\" />
     <Folder Include="Outgoing\" />
+    <Folder Include="Media\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Global\ErrorDoc.txt" />
