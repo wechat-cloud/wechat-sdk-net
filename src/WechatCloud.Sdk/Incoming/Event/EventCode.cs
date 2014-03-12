@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  EventCode.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,10 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public enum EventCode
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        Subscribe,
+        Unsubscribe
     }
 }
 

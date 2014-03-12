@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  MediaType.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,12 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public enum MediaType
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        Image,
+        Voice,
+        Video,
+        Thumb
     }
 }
 

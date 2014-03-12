@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  ResImageTextMessage.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,18 +21,20 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.Collections.Generic;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class OutImageTextMessage : OutMessageBase
     {
-        private readonly int nonce;
+        public int ArticleCount { get; private set; }
+        public List<string> Articles { get; private set; }
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public string PicUrl { get; private set; }
+        public string Url { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "news"; } } 
     }
 }
 

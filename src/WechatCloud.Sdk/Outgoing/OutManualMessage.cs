@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  ResManualMessage.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,17 +21,20 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.IO;
+using System.Text;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class OutManualMessage : OutMessageBase
     {
-        private readonly int nonce;
+        public override string MsgType { get { throw new InvalidOperationException("unavailable"); } } 
 
-        public WechatDemon() { }
+        internal override void Rendering(Stream stream) {
+            var content = "";
 
-        public void Dispose() {
-            throw new NotImplementedException();
+            var bytes = Encoding.Unicode.GetBytes(content);
+            stream.Write(bytes, 0, bytes.Length);
         }
     }
 }

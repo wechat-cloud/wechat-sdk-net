@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  MediaUploadRequest.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,11 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class MediaUploadRequest
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public string access_token { get; set; }
+        public MediaType type { get; set; }
+        public string media { get; set; }
     }
 }
 

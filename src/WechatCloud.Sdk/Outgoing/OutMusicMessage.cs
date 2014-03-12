@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  ResMusicMessage.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,15 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class OutMusicMessage : OutMessageBase
     {
-        private readonly int nonce;
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public string MusicURL { get; private set; }
+        public string HQMusicUrl { get; private set; }
+        public string ThumbMediaId { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "music"; } } 
     }
 }
 

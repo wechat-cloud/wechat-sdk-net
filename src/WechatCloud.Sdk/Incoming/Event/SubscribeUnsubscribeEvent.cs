@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  SubscribeUnsubscribeEvent.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,9 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class SubscribeUnsubscribeEvent : EventBase
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string Event { get; protected set; }
     }
 }
 

@@ -1,10 +1,10 @@
-﻿//
-//  MyClass.cs
+//
+//  ImageMessage.cs
 //
 //  Author:
-//       Lu Rongkai <lurongkai@gmail.com>
+//       lurongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2014 lurongkai
+//  Copyright (c) 2013 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,15 +24,12 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class ImageMessage : GeneralMessageBase
     {
-        private readonly int nonce;
+        public string PicUrl { get; private set; }
+        public string MediaId { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "image"; } }
     }
 }
 

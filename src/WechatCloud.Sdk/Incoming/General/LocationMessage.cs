@@ -1,10 +1,10 @@
-﻿//
-//  MyClass.cs
+//
+//  LocationMessage.cs
 //
 //  Author:
-//       Lu Rongkai <lurongkai@gmail.com>
+//       lurongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2014 lurongkai
+//  Copyright (c) 2013 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,15 +24,14 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class LocationMessage : GeneralMessageBase
     {
-        private readonly int nonce;
+        public string Location_X { get; private set; }
+        public string Location_Y { get; private set; }
+        public string Scale { get; private set; }
+        public string Label { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "location"; } }
     }
 }
 

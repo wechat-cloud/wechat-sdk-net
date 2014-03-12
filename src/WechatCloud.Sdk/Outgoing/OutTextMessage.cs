@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  ResTextMessage.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,11 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class ResTextMessage : OutMessageBase
     {
-        private readonly int nonce;
+        public string Content { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "text"; } } 
     }
 }
 

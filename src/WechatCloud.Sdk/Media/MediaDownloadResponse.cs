@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  MediaDownloadResponse.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,14 +24,9 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class MediaDownloadResponse
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
+        public MediaDownloadResponse() {
         }
     }
 }

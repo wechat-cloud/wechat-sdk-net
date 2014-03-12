@@ -1,10 +1,10 @@
-﻿//
-//  MyClass.cs
+//
+//  LinkMessage.cs
 //
 //  Author:
-//       Lu Rongkai <lurongkai@gmail.com>
+//       lurongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2014 lurongkai
+//  Copyright (c) 2013 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,15 +24,13 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
-    {
-        private readonly int nonce;
+    public class LinkMessage : GeneralMessageBase
+    {    
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public string Url { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "link"; } }
     }
 }
 

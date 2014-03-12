@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  QRScanEvent.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,12 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class QRScanSubscribedUserEvent : EventBase
     {
-        private readonly int nonce;
+        public string EventKey { get; private set; }
+        public string Ticket { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string Event { get { return "subscribe"; } }
     }
 }
 

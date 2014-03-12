@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  GeneralMessage.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,9 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public abstract class GeneralMessageBase : InMessageBase
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public long MsgId { get; protected set; }
     }
 }
 

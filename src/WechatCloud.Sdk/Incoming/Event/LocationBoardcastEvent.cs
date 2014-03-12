@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  LocationBoardcastEvent.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,13 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class LocationBoardcastEvent : EventBase
     {
-        private readonly int nonce;
+        public string Latitude { get; private set; }
+        public string Longitude { get; private set; }
+        public string Precision { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string Event { get { return "LOCATION"; } }
     }
 }
 

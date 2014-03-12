@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  VoiceMessage.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,12 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class VoiceMessage : GeneralMessageBase
     {
-        private readonly int nonce;
+        public string MediaId { get; private set; }
+        public string Format { get; private set; }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public override string MsgType { get { return "voice"; } }
     }
 }
 

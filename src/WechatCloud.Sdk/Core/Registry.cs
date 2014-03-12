@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  Registry.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,17 +21,21 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.Collections.Generic;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class Registry
     {
-        private readonly int nonce;
+        private static Registry _instance = new Registry();
+        private IDictionary<Type, object> _typeDict = new Dictionary<Type, object>();
+        private Registry() { }
 
-        public WechatDemon() { }
+        public static Registry Instance { get { return _instance; } }
 
-        public void Dispose() {
-            throw new NotImplementedException();
+        public T Resolve<T>() {
+            var type = typeof(T);
+            return (T)_typeDict[type];
         }
     }
 }

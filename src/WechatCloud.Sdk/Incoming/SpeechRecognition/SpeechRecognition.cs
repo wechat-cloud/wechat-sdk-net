@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  SpeechRecognition.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,12 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class SpeechRecognition : InMessageBase
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public string MediaId { get; private set; }
+        public string Format { get { return "amr"; } }
+        public string Recognition { get; private set; }
+        public long MsgID { get; private set; }
     }
 }
 

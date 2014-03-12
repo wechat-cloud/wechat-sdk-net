@@ -1,10 +1,10 @@
-﻿//
-//  MyClass.cs
+//
+//  MessageBase.cs
 //
 //  Author:
-//       Lu Rongkai <lurongkai@gmail.com>
+//       lurongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2014 lurongkai
+//  Copyright (c) 2013 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,17 +21,25 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.IO;
+using System.Text;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public abstract class MessageBase
     {
-        private readonly int nonce;
+        public string ToUserName { get; protected set; }
+        public string FromUserName { get; protected set; }
+        public DateTimeOffset CreateTime { get; protected set; }
 
-        public WechatDemon() { }
+        public virtual string MsgType { get; protected set; }
 
-        public void Dispose() {
-            throw new NotImplementedException();
+        internal virtual void Rendering(Stream stream) {
+            var serializer = Registry.Instance.Resolve<ISerializer>();
+            var content = serializer.Serialize(this);
+
+            var bytes = Encoding.Unicode.GetBytes(content);
+            stream.Write(bytes, 0, bytes.Length);
         }
     }
 }

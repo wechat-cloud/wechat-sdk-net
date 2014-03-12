@@ -1,10 +1,10 @@
-﻿//
-//  MyClass.cs
+//
+//  ISerializer.cs
 //
 //  Author:
-//       Lu Rongkai <lurongkai@gmail.com>
+//       lurongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2014 lurongkai
+//  Copyright (c) 2013 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -24,15 +24,9 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public interface ISerializer
     {
-        private readonly int nonce;
-
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        string Serialize(object source);
     }
 }
 
