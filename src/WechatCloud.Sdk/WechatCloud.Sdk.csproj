@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0BB09FFE-26FC-44F4-9B15-742E196C2122}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WechatCloud.Core</RootNamespace>
+    <RootNamespace>WechatCloud.Sdk</RootNamespace>
     <AssemblyName>WeChatSdk.Core</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,9 +51,6 @@
     <Compile Include="Menu\Actions\QueryMenuRequest.cs" />
     <Compile Include="Menu\Actions\QueryMenuResponse.cs" />
     <Compile Include="Menu\Actions\DeleteMenuRequest.cs" />
-    <Compile Include="..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="AccessToken.cs" />
     <Compile Include="Infrastucture\ISerializer.cs" />
     <Compile Include="Infrastucture\IDeserializer.cs" />
@@ -67,6 +64,7 @@
     <Compile Include="Messages\General\VideoMessage.cs" />
     <Compile Include="Messages\General\TextMessage.cs" />
     <Compile Include="Messages\General\VoiceMessage.cs" />
+    <Compile Include="WechatDemon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

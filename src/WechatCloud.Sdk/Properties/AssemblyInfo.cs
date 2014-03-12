@@ -1,5 +1,5 @@
 //
-//  MyClass.cs
+//  AssemblyInfo.cs
 //
 //  Author:
 //       lurongkai <lurongkai@gmail.com>
@@ -20,13 +20,15 @@
 //  along with this program; if not, write to the Free Software
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
-using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
-namespace WeChat.Sdk.Tests
-{
-    public class WeChatTest
-    {
-        public void Empty() {
-        }
-    }
-}
+[assembly: AssemblyTitle("WechatCloud.Core")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("WechatCloud Net Sdk")]
+[assembly: AssemblyCopyright("lurongkai")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion("0.5.*")]
