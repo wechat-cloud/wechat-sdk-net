@@ -1,5 +1,5 @@
 ﻿//
-//  GeneralMessage.cs
+//  QRScanEvent.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -22,11 +22,14 @@
 //
 using System;
 
-namespace WechatCloud.Core.Messages
+namespace WechatCloud.Sdk
 {
-    public abstract class GeneralMessage : MessageBase
+    public class QRScanSubscribedUserEvent : EventBase
     {
-        public long MsgId { get; protected set; }
+        public string EventKey { get; private set; }
+        public string Ticket { get; private set; }
+
+        public override string Event { get { return "subscribe"; } }
     }
 }
 

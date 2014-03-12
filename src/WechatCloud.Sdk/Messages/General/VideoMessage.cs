@@ -22,18 +22,14 @@
 //
 using System;
 
-namespace WechatCloud.Core.Messages
+namespace WechatCloud.Sdk
 {
-    public class VideoMessage : GeneralMessage
+    public class VideoMessage : GeneralMessageBase
     {
         public string MediaId { get; private set; }
         public string ThumbMediaId { get; private set; }
 
-        public override string MsgType {
-            get {
-                return "video";
-            }
-        }
+        public override string MsgType { get { return "video"; } }
     }
 }
 

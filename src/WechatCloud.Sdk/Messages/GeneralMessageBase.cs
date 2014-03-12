@@ -1,10 +1,10 @@
-//
-//  DeleteMenuRequest.cs
+﻿//
+//  GeneralMessage.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,13 +22,11 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Menu.Actions
+namespace WechatCloud.Sdk
 {
-    /// http请求方式：GET
-    /// https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN
-    public class DeleteMenuRequest
+    public abstract class GeneralMessageBase : MessageBase
     {
-        public DeleteMenuRequest() {
-        }
+        public long MsgId { get; protected set; }
     }
 }
+

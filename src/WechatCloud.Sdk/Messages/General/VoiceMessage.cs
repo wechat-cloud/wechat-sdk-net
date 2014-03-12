@@ -22,19 +22,14 @@
 //
 using System;
 
-namespace WechatCloud.Core.Messages
+namespace WechatCloud.Sdk
 {
-    public class VoiceMessage : GeneralMessage
+    public class VoiceMessage : GeneralMessageBase
     {
         public string MediaId { get; private set; }
-
         public string Format { get; private set; }
 
-        public override string MsgType {
-            get {
-                return "voice";
-            }
-        }
+        public override string MsgType { get { return "voice"; } }
     }
 }
 

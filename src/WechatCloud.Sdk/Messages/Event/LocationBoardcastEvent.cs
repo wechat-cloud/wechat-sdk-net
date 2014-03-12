@@ -1,10 +1,10 @@
-//
-//  MenuButtonLink.cs
+﻿//
+//  LocationBoardcastEvent.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,30 +21,16 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.Text.RegularExpressions;
 
-namespace WeChatSdk.Core.Menu
+namespace WechatCloud.Sdk
 {
-    public class MenuButtonView : MenuButtonBase
+    public class LocationBoardcastEvent : EventBase
     {
-        public MenuButtonView(string buttonName, string buttonUrl): base(buttonName) {
-            if (!Regex.IsMatch(buttonUrl, @"")) {
-                throw new ArgumentException("invalid url format");
-            }
+        public string Latitude { get; private set; }
+        public string Longitude { get; private set; }
+        public string Precision { get; private set; }
 
-            url = buttonUrl;
-        }
-
-        public override string type { 
-            get {
-                return "view";
-            } 
-        }
-
-        public string url { get; set; }
-
-        public override bool IsValid() {
-            return true;
-        }
+        public override string Event { get { return "LOCATION"; } }
     }
 }
+

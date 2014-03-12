@@ -1,10 +1,10 @@
-//
-//  MenuParser.cs
+﻿//
+//  SubscribeUnsubscribeEvent.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,12 +22,11 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Menu.Builder
+namespace WechatCloud.Sdk
 {
-    public class MenuParser
+    public class SubscribeUnsubscribeEvent : EventBase
     {
-        public MenuParser() {
-        }
+        public string Event { get; private set; }
     }
 }
 

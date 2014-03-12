@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WechatCloud.Core.Messages
+namespace WechatCloud.Sdk
 {
     public abstract class MessageBase
     {

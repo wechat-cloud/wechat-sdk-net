@@ -22,7 +22,7 @@
 //
 using System;
 
-namespace WechatCloud.Core.Messages
+namespace WechatCloud.Sdk
 {
     /// <xml><ToUserName><![CDATA[toUser]]></ToUserName>
     /// <FromUserName><![CDATA[FromUser]]></FromUserName>
@@ -38,9 +38,10 @@ namespace WechatCloud.Core.Messages
     /// MsgType	 		消息类型，event
     /// Event	 		事件类型，subscribe(订阅)、unsubscribe(取消订阅)、CLICK(自定义菜单点击事件)
     /// EventKey	 	事件KEY值，与自定义菜单接口中KEY值对应
-    public abstract class EventMessage : MessageBase
+    public abstract class EventBase : MessageBase
     {
         public virtual string Event { get; protected set; }
+        public override string MsgType { get { return "event"; } }
     }
 }
 

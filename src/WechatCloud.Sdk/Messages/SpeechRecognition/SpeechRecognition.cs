@@ -1,10 +1,10 @@
-//
-//  QueryMenuResponse.cs
+﻿//
+//  SpeechRecognition.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,10 +22,14 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Menu.Actions
+namespace WechatCloud.Sdk
 {
-    public class QueryMenuResponse
+    public class SpeechRecognition : MessageBase
     {
-        public MpMenu mene{ get; set; }
+        public string MediaId { get; private set; }
+        public string Format { get { return "amr"; } }
+        public string Recognition { get; private set; }
+        public long MsgID { get; private set; }
     }
 }
+

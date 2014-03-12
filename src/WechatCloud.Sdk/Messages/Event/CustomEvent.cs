@@ -1,10 +1,10 @@
-//
-//  QueryMenuRequest.cs
+﻿//
+//  CustomEvent.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,13 +22,13 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Menu.Actions
+namespace WechatCloud.Sdk
 {
-    /// http请求方式：POST
-    /// https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN
-    public class QueryMenuRequest
+    public class CustomEvent : EventBase
     {
-        public QueryMenuRequest() {
-        }
+        public string EventKey { get; private set; }
+
+        public override string Event { get { return "CLICK"; } } 
     }
 }
+
