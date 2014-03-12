@@ -74,7 +74,9 @@
     <Compile Include="Media\MediaUploadResponse.cs" />
     <Compile Include="Media\MediaDownloadRequest.cs" />
     <Compile Include="Core\AccessToken.cs" />
-    <Compile Include="Global\Limitation.cs" />
+    <Compile Include="Global\MeasureLimitation.cs" />
+    <Compile Include="Global\ProductionLimitation.cs" />
+    <Compile Include="Global\Limination.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
