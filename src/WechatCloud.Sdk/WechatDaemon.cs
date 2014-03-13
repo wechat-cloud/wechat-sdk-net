@@ -24,11 +24,17 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class WechatDaemon : IDisposable
     {
-        private readonly int nonce;
+        private readonly string _appid;
+        private readonly string _secret;
+        private readonly DaemonConfiguration _configuration;
 
-        public WechatDemon() { }
+        public WechatDaemon(string appid, string secret, DaemonConfiguration configuration = new DaemonConfiguration()) {
+            _appid = appid;
+            _secret = secret;
+            _configuration = configuration;
+        }
 
         public void Dispose() {
             throw new NotImplementedException();

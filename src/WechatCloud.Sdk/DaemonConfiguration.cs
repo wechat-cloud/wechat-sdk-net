@@ -1,10 +1,10 @@
-//
-//  ISerializer.cs
+﻿//
+//  DeamonConfiguration.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,15 +21,17 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.IO;
+using System.Security.Policy;
 
 namespace WechatCloud.Sdk
 {
-    public interface ISerializer
+    public class DaemonConfiguration
     {
-        string Serialize(object source);
+        public DaemonConfiguration() {
+            BaseUrl = new Url("https://api.weixin.qq.com/cgi-bin/");
+        }
 
-        void SerializeTo(object source, Stream stream);
+        public Url BaseUrl { get; set; }
     }
 }
 

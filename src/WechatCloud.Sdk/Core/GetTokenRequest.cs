@@ -1,10 +1,10 @@
-//
-//  AccessToken.cs
+﻿//
+//  GetTokenRequest.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,14 +22,14 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WechatCloud.Sdk
 {
-    /// access_token    获取到的凭证
-    /// expires_in      凭证有效时间，单位：秒
-    public class AccessToken
+    public class GetTokenRequest : IWechatRequest
     {
-        public string access_token { get; set; }
+        public string grant_type { get { return "client_credential"; } }
 
-        public int expires_in { get; set; }
+        public string appid { get; private set; }
+        public string secret { get; private set; }
     }
 }
+

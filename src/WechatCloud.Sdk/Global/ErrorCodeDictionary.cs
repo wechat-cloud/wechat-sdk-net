@@ -25,7 +25,7 @@ using System.Collections.Generic;
 
 namespace WechatCloud.Sdk
 {
-    public class ErrorCodeDictionary
+    internal class ErrorCodeDictionary
     {
         private static IDictionary<int, string> _errorDict = new Dictionary<int, string>();
 
@@ -114,7 +114,7 @@ namespace WechatCloud.Sdk
             _errorDict.Add(50001, @"用户未授权该api");
         }
 
-        public static string GetErrorMessage(int errorCode) {
+        internal static string GetErrorMessage(int errorCode) {
             if(_errorDict.ContainsKey(errorCode)) {
                 return _errorDict[errorCode];
             }

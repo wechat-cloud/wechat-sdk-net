@@ -1,5 +1,5 @@
 //
-//  ISerializer.cs
+//  AccessToken.cs
 //
 //  Author:
 //       lurongkai <lurongkai@gmail.com>
@@ -21,15 +21,12 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.IO;
 
 namespace WechatCloud.Sdk
 {
-    public interface ISerializer
+    public class GetTokenResponse : IWechatResponse
     {
-        string Serialize(object source);
-
-        void SerializeTo(object source, Stream stream);
+        public string access_token { get; set; }
+        public int expires_in { get; set; }
     }
 }
-

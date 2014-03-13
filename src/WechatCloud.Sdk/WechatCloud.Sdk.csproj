@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Global\ErrorResponse.cs" />
-    <Compile Include="WechatDemon.cs" />
     <Compile Include="MessageBase.cs" />
     <Compile Include="Core\ISerializer.cs" />
     <Compile Include="Core\IDeserializer.cs" />
@@ -73,11 +72,16 @@
     <Compile Include="Media\MediaUploadRequest.cs" />
     <Compile Include="Media\MediaUploadResponse.cs" />
     <Compile Include="Media\MediaDownloadRequest.cs" />
-    <Compile Include="Core\AccessToken.cs" />
     <Compile Include="Global\MeasureLimitation.cs" />
     <Compile Include="Global\ProductionLimitation.cs" />
     <Compile Include="Global\Limination.cs" />
     <Compile Include="Global\ErrorCodeDictionary.cs" />
+    <Compile Include="Core\GetTokenRequest.cs" />
+    <Compile Include="Core\GetTokenResponse.cs" />
+    <Compile Include="Core\IWechatRequest.cs" />
+    <Compile Include="Core\IWechatResponse.cs" />
+    <Compile Include="WechatDaemon.cs" />
+    <Compile Include="DaemonConfiguration.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -86,6 +90,7 @@
     <Folder Include="Incoming\" />
     <Folder Include="Outgoing\" />
     <Folder Include="Media\" />
+    <Folder Include="Builder\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Global\ErrorDoc.txt" />
