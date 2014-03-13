@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  GetTokenRequest.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,15 +24,12 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDemon : IDisposable
+    public class GetTokenRequest : IWechatRequest
     {
-        private readonly int nonce;
+        public string grant_type { get { return "client_credential"; } }
 
-        public WechatDemon() { }
-
-        public void Dispose() {
-            throw new NotImplementedException();
-        }
+        public string appid { get; private set; }
+        public string secret { get; private set; }
     }
 }
 

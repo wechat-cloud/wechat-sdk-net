@@ -1,10 +1,10 @@
-//
-//  AccessToken.cs
+﻿//
+//  IWechatDaemon.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,14 +22,12 @@
 //
 using System;
 
-namespace WeChatSdk.Core
+namespace WechatCloud.Sdk
 {
-    /// access_token    获取到的凭证
-    /// expires_in      凭证有效时间，单位：秒
-    public class AccessToken
+    public interface IWechatDaemon: IDisposable
     {
-        public string access_token { get; set; }
-
-        public int expires_in { get; set; }
+        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
+        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
     }
 }
+
