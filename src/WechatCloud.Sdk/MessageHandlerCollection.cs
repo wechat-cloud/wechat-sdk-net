@@ -25,7 +25,7 @@ using System.Collections.Generic;
 
 namespace WechatCloud.Sdk
 {
-    public class MessageHandlerCollection : Dictionary<Type, MessageHandler<InMessageBase>> 
+    public class MessageHandlerCollection : Dictionary<Type, IMessageHandler<InMessageBase>> 
     {
     }
 }

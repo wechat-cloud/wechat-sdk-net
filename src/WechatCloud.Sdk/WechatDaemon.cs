@@ -24,7 +24,7 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDaemon : MarshalByRefObject, IWechatDaemon, IDisposable
+    public class WechatDaemon : MarshalByRefObject, IWechatDaemon
     {
         private readonly string _appid;
         private readonly string _secret;
@@ -41,7 +41,7 @@ namespace WechatCloud.Sdk
             _configuration = configuration;
         }
 
-        public void SubscribeEvent<T>(MessageHandler<T> handler) where T : InMessageBase {
+        public void SubscribeEvent<T>(IMessageHandler<T> handler) where T : InMessageBase {
             var messageType = typeof(T);
             if(_messageHandlerCollection.ContainsKey(messageType)) {
                 throw new InvalidOperationException("handler already registered");
@@ -50,7 +50,7 @@ namespace WechatCloud.Sdk
             _messageHandlerCollection.Add(messageType, handler);
         }
 
-        public void UnsubscribeEvent<T>(MessageHandler<T> handler) where T : InMessageBase {
+        public void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T : InMessageBase {
             var messageType = typeof(T);
             if(_messageHandlerCollection.ContainsKey(messageType)) {
                 _messageHandlerCollection.Remove(messageType);

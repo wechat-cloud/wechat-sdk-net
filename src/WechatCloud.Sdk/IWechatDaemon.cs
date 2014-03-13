@@ -26,8 +26,8 @@ namespace WechatCloud.Sdk
 {
     public interface IWechatDaemon: IDisposable
     {
-        void SubscribeEvent<T>(MessageHandler<T> handler) where T: InMessageBase;
-        void UnsubscribeEvent<T>(MessageHandler<T> handler) where T: InMessageBase;
+        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
+        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
     }
 }
 

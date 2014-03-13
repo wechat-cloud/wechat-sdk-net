@@ -24,6 +24,9 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public delegate OutMessageBase MessageHandler<in T>(T inMessageBase) where T: InMessageBase;
+    public interface IMessageHandler<out T> where T : InMessageBase
+    {
+
+    }
 }
 
