@@ -24,16 +24,38 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public class WechatDaemon : IDisposable
+    public class WechatDaemon : MarshalByRefObject, IWechatDaemon, IDisposable
     {
         private readonly string _appid;
         private readonly string _secret;
         private readonly DaemonConfiguration _configuration;
 
-        public WechatDaemon(string appid, string secret, DaemonConfiguration configuration = new DaemonConfiguration()) {
+        private MessageHandlerCollection _messageHandlerCollection = new MessageHandlerCollection();
+
+        public WechatDaemon(string appid, string secret)
+            : this(appid, secret, new DaemonConfiguration()) { }
+
+        public WechatDaemon(string appid, string secret, DaemonConfiguration configuration) {
             _appid = appid;
             _secret = secret;
             _configuration = configuration;
+        }
+
+        public void SubscribeEvent<T>(MessageHandler<T> handler) where T : InMessageBase {
+            var messageType = typeof(T);
+            if(_messageHandlerCollection.ContainsKey(messageType)) {
+                throw new InvalidOperationException("handler already registered");
+            }
+
+            _messageHandlerCollection.Add(messageType, handler);
+        }
+
+        public void UnsubscribeEvent<T>(MessageHandler<T> handler) where T : InMessageBase {
+            var messageType = typeof(T);
+            if(_messageHandlerCollection.ContainsKey(messageType)) {
+                _messageHandlerCollection.Remove(messageType);
+            }
+
         }
 
         public void Dispose() {

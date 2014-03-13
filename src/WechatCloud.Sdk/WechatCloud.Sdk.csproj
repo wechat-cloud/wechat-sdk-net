@@ -82,6 +82,9 @@
     <Compile Include="Core\IWechatResponse.cs" />
     <Compile Include="WechatDaemon.cs" />
     <Compile Include="DaemonConfiguration.cs" />
+    <Compile Include="IWechatDaemon.cs" />
+    <Compile Include="MessageHandlerCollection.cs" />
+    <Compile Include="MessageHandler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
