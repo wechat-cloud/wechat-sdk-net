@@ -22,6 +22,7 @@
 //
 using System;
 using Xunit;
+using FluentAssertions;
 
 namespace WechatCloud.Sdk.Tests
 {
@@ -29,7 +30,11 @@ namespace WechatCloud.Sdk.Tests
     {
         [Fact]
         public void BasicApiTest() {
-            var daemon = new WechatDaemon(null, null);
+            Action createNewDaemon = () => {
+                var daemon = new WechatDaemon(null, null);
+            };
+
+            createNewDaemon.ShouldNotThrow("Argument should not be null.");
         }
     }
 }

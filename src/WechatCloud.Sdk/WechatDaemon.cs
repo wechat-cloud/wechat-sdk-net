@@ -37,6 +37,14 @@ namespace WechatCloud.Sdk
             : this(appid, secret, new DaemonConfiguration()) { }
 
         public WechatDaemon(string appid, string secret, DaemonConfiguration configuration) {
+            if(appid == null) {
+                throw new ArgumentNullException("appid");
+            }
+
+            if (secret == null) {
+                throw new ArgumentNullException("secret");
+            }
+
             _appid = appid;
             _secret = secret;
             _configuration = configuration;
