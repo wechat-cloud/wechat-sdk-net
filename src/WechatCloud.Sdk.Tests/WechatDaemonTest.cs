@@ -1,10 +1,10 @@
-//
-//  ITokenService.cs
+﻿//
+//  WechatDaemonTest.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,13 +21,21 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using WeChatSdk.Core;
+using Xunit;
+using FluentAssertions;
 
-namespace WeChatSdk.Client.Authentication
+namespace WechatCloud.Sdk.Tests
 {
-    public interface ITokenService
+    public class WechatDaemonTest
     {
-        AccessToken GetAccessToken(string token, string appId, string appSecret);
+        [Fact]
+        public void BasicApiTest() {
+            Action createNewDaemon = () => {
+                var daemon = new WechatDaemon(null, null);
+            };
+
+            createNewDaemon.ShouldNotThrow("Argument should not be null.");
+        }
     }
 }
 

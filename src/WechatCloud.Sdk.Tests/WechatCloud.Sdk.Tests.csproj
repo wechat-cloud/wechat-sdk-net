@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DEF0863D-E4E1-49E6-89CC-3AA2F51DFEDA}</ProjectGuid>
+    <ProjectGuid>{47C802BF-635A-487C-B54D-FDECA5A8FE2F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WeChatSdk.Client</RootNamespace>
-    <AssemblyName>WeChatSdk.Client</AssemblyName>
+    <RootNamespace>WechatCloud.Sdk.Tests</RootNamespace>
+    <AssemblyName>WechatCloud.Sdk.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,34 +30,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\packages\ServiceStack.Text.3.9.62\lib\net35\ServiceStack.Text.dll</HintPath>
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\..\packages\RestSharp.104.2.0\lib\net4\RestSharp.dll</HintPath>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="FluentAssertions">
+      <HintPath>..\packages\FluentAssertions.2.2.0.0\lib\net40\FluentAssertions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WeChatClient.cs" />
-    <Compile Include="..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Authentication\ITokenService.cs" />
-    <Compile Include="Authentication\DefaultTokenService.cs" />
-    <Compile Include="ClientSetting.cs" />
+    <Compile Include="WechatDaemonTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Authentication\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WeChatSdk.Core\WechatCloud.Core.csproj">
+    <ProjectReference Include="..\WechatCloud.Sdk\WechatCloud.Sdk.csproj">
       <Project>{0BB09FFE-26FC-44F4-9B15-742E196C2122}</Project>
-      <Name>WechatCloud.Core</Name>
+      <Name>WechatCloud.Sdk</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

@@ -28,14 +28,23 @@ namespace WechatCloud.Sdk
     public class Registry
     {
         private static Registry _instance = new Registry();
-        private IDictionary<Type, object> _typeDict = new Dictionary<Type, object>();
+        private IDictionary<Type, Type> _typeDict = new Dictionary<Type, Type>();
         private Registry() { }
 
         public static Registry Instance { get { return _instance; } }
 
+        public void Register<TInterfaceType, TInstanceType>() where TInstanceType : TInterfaceType, new() {
+            var interfaceType = typeof(TInterfaceType);
+            var instanceType = typeof(TInstanceType);
+
+            _typeDict.Add(interfaceType, instanceType);
+        }
+
         public T Resolve<T>() {
             var type = typeof(T);
-            return (T)_typeDict[type];
+            var instanceType = _typeDict[type];
+
+            return Activator.CreateInstance<T>();
         }
     }
 }

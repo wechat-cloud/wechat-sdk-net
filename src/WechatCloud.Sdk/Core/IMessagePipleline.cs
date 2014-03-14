@@ -1,5 +1,5 @@
 ﻿//
-//  IWechatDaemon.cs
+//  IMessagePipleline.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -24,10 +24,10 @@ using System;
 
 namespace WechatCloud.Sdk
 {
-    public interface IWechatDaemon: IDisposable
+    public interface IMessagePipleline
     {
-        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
+
+        //PublishData
     }
 }
 

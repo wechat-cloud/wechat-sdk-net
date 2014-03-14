@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatCloud.Sdk", "WechatCloud.Sdk\WechatCloud.Sdk.csproj", "{0BB09FFE-26FC-44F4-9B15-742E196C2122}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatCloud.Sdk.Tests", "WechatCloud.Sdk.Tests\WechatCloud.Sdk.Tests.csproj", "{47C802BF-635A-487C-B54D-FDECA5A8FE2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,9 +15,13 @@ Global
 		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB09FFE-26FC-44F4-9B15-742E196C2122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C802BF-635A-487C-B54D-FDECA5A8FE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C802BF-635A-487C-B54D-FDECA5A8FE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C802BF-635A-487C-B54D-FDECA5A8FE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C802BF-635A-487C-B54D-FDECA5A8FE2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = src\WeChatSdk.Core\WechatCloud.Sdk.csproj
+		StartupItem = WechatCloud.Sdk\WechatCloud.Sdk.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = null

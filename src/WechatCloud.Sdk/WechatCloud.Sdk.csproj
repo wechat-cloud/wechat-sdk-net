@@ -40,8 +40,6 @@
     <Compile Include="MessageBase.cs" />
     <Compile Include="Core\ISerializer.cs" />
     <Compile Include="Core\IDeserializer.cs" />
-    <Compile Include="Core\Communication\AccessTokenRetrieve.cs" />
-    <Compile Include="Core\Communication\ConnectionParameter.cs" />
     <Compile Include="Incoming\General\ImageMessage.cs" />
     <Compile Include="Incoming\General\LinkMessage.cs" />
     <Compile Include="Incoming\General\LocationMessage.cs" />
@@ -82,9 +80,10 @@
     <Compile Include="Core\IWechatResponse.cs" />
     <Compile Include="WechatDaemon.cs" />
     <Compile Include="DaemonConfiguration.cs" />
-    <Compile Include="IWechatDaemon.cs" />
-    <Compile Include="MessageHandlerCollection.cs" />
-    <Compile Include="IMessageHandler.cs" />
+    <Compile Include="Core\IMessageHandler.cs" />
+    <Compile Include="Core\IMessagePipleline.cs" />
+    <Compile Include="Core\MessageHandlerCollection.cs" />
+    <Compile Include="Core\IWechatDaemon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

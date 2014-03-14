@@ -21,6 +21,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.Threading.Tasks;
 
 namespace WechatCloud.Sdk
 {
@@ -36,6 +37,14 @@ namespace WechatCloud.Sdk
             : this(appid, secret, new DaemonConfiguration()) { }
 
         public WechatDaemon(string appid, string secret, DaemonConfiguration configuration) {
+            if(appid == null) {
+                throw new ArgumentNullException("appid");
+            }
+
+            if (secret == null) {
+                throw new ArgumentNullException("secret");
+            }
+
             _appid = appid;
             _secret = secret;
             _configuration = configuration;
@@ -55,7 +64,10 @@ namespace WechatCloud.Sdk
             if(_messageHandlerCollection.ContainsKey(messageType)) {
                 _messageHandlerCollection.Remove(messageType);
             }
+        }
 
+        public Task<IWechatDaemon> ListeningAsync(IMessagePipleline pipleine) {
+            throw new NotImplementedException();
         }
 
         public void Dispose() {
