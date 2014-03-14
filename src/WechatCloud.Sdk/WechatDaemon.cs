@@ -21,6 +21,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.Threading.Tasks;
 
 namespace WechatCloud.Sdk
 {
@@ -55,7 +56,10 @@ namespace WechatCloud.Sdk
             if(_messageHandlerCollection.ContainsKey(messageType)) {
                 _messageHandlerCollection.Remove(messageType);
             }
+        }
 
+        public Task<IWechatDaemon> ListeningAsync(IMessagePipleline pipleine) {
+            throw new NotImplementedException();
         }
 
         public void Dispose() {

@@ -1,10 +1,10 @@
-//
-//  AccessTokenRetrieve.cs
+﻿//
+//  IWechatDaemon.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,17 +21,16 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.Threading.Tasks;
 
-namespace WeChatSdk.Core.Communication
+namespace WechatCloud.Sdk
 {
-    /// URL:  https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
-    /// 参数          是否必须    说明
-    /// grant_type      是   获取access_token填写client_credential
-    /// appid           是   第三方用户唯一凭证
-    /// secret          是   第三方用户唯一凭证密钥，既appsecret
-    public class AccessTokenRetrieve
+    public interface IWechatDaemon: IDisposable
     {
-        public AccessTokenRetrieve() {
-        }
+        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
+        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
+
+        Task<IWechatDaemon> ListeningAsync(IMessagePipleline pipleine);
     }
 }
+

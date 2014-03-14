@@ -1,10 +1,10 @@
-//
-//  MessageResponse.cs
+﻿//
+//  MyClass.cs
 //
 //  Author:
-//       lurongkai <lurongkai@gmail.com>
+//       Lu Rongkai <lurongkai@gmail.com>
 //
-//  Copyright (c) 2013 lurongkai
+//  Copyright (c) 2014 lurongkai
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -22,15 +22,12 @@
 //
 using System;
 
-namespace WeChatSdk.Core.Communication
+namespace WechatCloud.Sdk.Tests
 {
-    /// signature    微信加密签名
-    /// timestamp    时间戳
-    /// nonce    随机数
-    /// echostr  随机字符串
-    public class MessageResponse
+    public class MyClass
     {
-        public MessageResponse() {
+        public MyClass() {
         }
     }
 }
+

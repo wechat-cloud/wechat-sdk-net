@@ -1,5 +1,5 @@
 ﻿//
-//  Registry.cs
+//  WechatDaemonTest.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,30 +21,15 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.Collections.Generic;
+using Xunit;
 
-namespace WechatCloud.Sdk
+namespace WechatCloud.Sdk.Tests
 {
-    public class Registry
+    public class WechatDaemonTest
     {
-        private static Registry _instance = new Registry();
-        private IDictionary<Type, Type> _typeDict = new Dictionary<Type, Type>();
-        private Registry() { }
-
-        public static Registry Instance { get { return _instance; } }
-
-        public void Register<TInterfaceType, TInstanceType>() where TInstanceType : TInterfaceType, new() {
-            var interfaceType = typeof(TInterfaceType);
-            var instanceType = typeof(TInstanceType);
-
-            _typeDict.Add(interfaceType, instanceType);
-        }
-
-        public T Resolve<T>() {
-            var type = typeof(T);
-            var instanceType = _typeDict[type];
-
-            return Activator.CreateInstance<T>();
+        [Fact]
+        public void BasicApiTest() {
+            var daemon = new WechatDaemon(null, null);
         }
     }
 }
