@@ -31,6 +31,9 @@ namespace WechatCloud.Sdk
         private readonly string _secret;
         private readonly DaemonConfiguration _configuration;
 
+        private DaemonStatus _status = DaemonStatus.Detached;
+        private object _listenerLock = new object();
+
         private MessageHandlerCollection _messageHandlerCollection = new MessageHandlerCollection();
 
         public WechatDaemon(string appid, string secret)
@@ -66,8 +69,20 @@ namespace WechatCloud.Sdk
             }
         }
 
-        public Task<IWechatDaemon> ListeningAsync(IMessagePipleline pipleine) {
-            throw new NotImplementedException();
+        public void Listening(IMessagePipeline pipeline) {
+            lock (_listenerLock) {
+                if(_status == DaemonStatus.Attached) {
+                    throw new InvalidOperationException("Daemon already attached on pipeline.");
+                }
+
+                // TODO:Listening
+
+                _status = DaemonStatus.Attached;
+            }
+        }
+
+        public Task ListeningAsync(IMessagePipeline pipeline) {
+            return Task.Factory.StartNew(() => Listening(pipeline), TaskCreationOptions.LongRunning);
         }
 
         public void Dispose() {

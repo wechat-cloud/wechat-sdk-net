@@ -1,5 +1,5 @@
-﻿//
-//  IWechatDaemon.cs
+//
+//  MyClass.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -25,13 +25,10 @@ using System.Threading.Tasks;
 
 namespace WechatCloud.Sdk
 {
-    public interface IWechatDaemon: IDisposable
-    {
-        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-
-        void Listening(IMessagePipeline pipeline);
-        Task ListeningAsync(IMessagePipeline pipleine);
-    }
+    internal enum DaemonStatus
+	{
+        Attached,
+        Detached
+	}
 }
 

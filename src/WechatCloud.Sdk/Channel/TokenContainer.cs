@@ -1,5 +1,5 @@
 ﻿//
-//  IWechatDaemon.cs
+//  TokenContainer.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,17 +21,13 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
-using System.Threading.Tasks;
 
 namespace WechatCloud.Sdk
 {
-    public interface IWechatDaemon: IDisposable
+    public class TokenContainer
     {
-        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-
-        void Listening(IMessagePipeline pipeline);
-        Task ListeningAsync(IMessagePipeline pipleine);
+        public TokenContainer() {
+        }
     }
 }
 

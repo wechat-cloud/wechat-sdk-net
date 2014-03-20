@@ -1,5 +1,5 @@
 ﻿//
-//  IWechatDaemon.cs
+//  IMessagePipleline.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -25,13 +25,9 @@ using System.Threading.Tasks;
 
 namespace WechatCloud.Sdk
 {
-    public interface IWechatDaemon: IDisposable
+    public interface IMessagePipeline
     {
-        void SubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-        void UnsubscribeEvent<T>(IMessageHandler<T> handler) where T: InMessageBase;
-
-        void Listening(IMessagePipeline pipeline);
-        Task ListeningAsync(IMessagePipeline pipleine);
+        event Func<PipelineContext, Task> OnMessage;
     }
 }
 

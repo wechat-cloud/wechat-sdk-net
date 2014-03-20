@@ -1,5 +1,5 @@
 ﻿//
-//  IMessagePipleline.cs
+//  PipelineContext.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -21,13 +21,14 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
 using System;
+using System.IO;
 
 namespace WechatCloud.Sdk
 {
-    public interface IMessagePipleline
+    public abstract class PipelineContext
     {
-
-        //PublishData
+        public Stream RequestStream { get; protected set; } 
+        public Stream ResponseStream { get; protected set; } 
     }
 }
 
