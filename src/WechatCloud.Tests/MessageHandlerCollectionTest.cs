@@ -1,5 +1,5 @@
 ﻿//
-//  MyClass.cs
+//  Test.cs
 //
 //  Author:
 //       Lu Rongkai <lurongkai@gmail.com>
@@ -20,13 +20,22 @@
 //  along with this program; if not, write to the Free Software
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 //
+using NUnit.Framework;
 using System;
+using FluentAssertions;
+using WechatCloud.Sdk;
 
-namespace WechatCloud.Sdk.Tests
+namespace WechatCloud.Tests
 {
-    public class MyClass
+    [TestFixture]
+    public class MessageHandlerCollectionTest
     {
-        public MyClass() {
+        [Test]
+        public void AddToCollection() {
+            var collection = new MessageHandlerCollection();
+
+            collection.Count.Should().Equals(0);
+
         }
     }
 }

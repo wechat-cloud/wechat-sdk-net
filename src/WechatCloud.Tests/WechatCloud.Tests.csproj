@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{47C802BF-635A-487C-B54D-FDECA5A8FE2F}</ProjectGuid>
+    <ProjectGuid>{DF8F17A4-AA25-4233-93E4-0371F2FF94E8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WechatCloud.Sdk.Tests</RootNamespace>
-    <AssemblyName>WechatCloud.Sdk.Tests</AssemblyName>
+    <RootNamespace>WechatCloud.Tests</RootNamespace>
+    <AssemblyName>WechatCloud.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,18 +30,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="xunit">
-      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="nunit.framework" />
     <Reference Include="FluentAssertions">
       <HintPath>..\packages\FluentAssertions.2.2.0.0\lib\net40\FluentAssertions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WechatDaemonTest.cs" />
+    <Compile Include="MessageHandlerCollectionTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
